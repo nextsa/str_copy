@@ -1,0 +1,6 @@
+string: string.o MyString.o
+	g++ -std=c++11 -o string string.o MyString.o
+string.o:string.cpp MyString.o
+	g++ -c string.cpp
+MyString.o: MyString.cpp MyString.h
+	g++ -c MyString.cpp
